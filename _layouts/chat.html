@@ -1,0 +1,63 @@
+---
+layout: chat
+---
+
+<!DOCTYPE html>
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <body >
+      <div class="wrapper">
+        <div id="message_window">
+            <!-- this bar will appear if the websocket connection is not established-->
+            <div class="disconnected">
+                Disconnected... reconnecting!
+            </div>
+            <!-- this bar will appear if the websocket connection has failed to reconnect after a disconnect-->
+            <div class="offline">
+                Offline! Reload to reconnect.
+            </div>
+
+            <!-- this section contains the scrolling list of messages -->
+            <section>
+                <div id="message_list">
+                  <!-- 
+                    this div is used to format both incoming/outgoint messages.
+                    they are styled differently based a css class tied to the message.type field.
+                  -->
+                    <div id="message_template">
+                        <div class="message {{ message.type }}">
+                            {{#if message.isTyping}}
+                              <div class="typing-indicator">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                              </div>
+                            {{/if}}
+                            {{{ message.html }}}
+
+                            <!-- if the open_link field is present in the message, insert a button -->
+                            {{#if message.open_link}}
+                              <a href="{{{ message.open_link }}}" target="_blank" class="button_message">{{#if message.link_title}}{{message.link_title}}{{else}}{{message.open_link}}{{/if}}</a>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- this element contains any quick replies -->
+            <div id="message_replies">
+            </div>
+            <footer>
+                <form onsubmit="Botkit.send(Botkit.input.value, event)">
+                    <input type="text" autocomplete="off" id="messenger_input" placeholder="Type here..." />
+                    <button type="submit">Send</button>
+                </form>
+            </footer>
+        </div>
+        </div>
+    <script src="{{ site.url }}/assets/js/client.js"></script>
+</body>
+</html>
