@@ -1,0 +1,24 @@
+- title: chanmi-lee.github.io
+  url: https://chanmi-lee.github.io/
+  image: https://chanmi-lee.github.io/images/home-image.png
+  completed: true
+
+- title: LF Mall Project
+  url: https://chanmi-lee.github.io/LF-Mall-project/
+  image: https://chanmi-lee.github.io/images/project-lfmall-mweb.png
+  completed: true
+
+- title: BLS Report Automation
+  url: https://chanmi-lee.github.io/BLS-Report-Automation/
+  image: https://chanmi-lee.github.io/images/project-bls-report-automation.png
+  completed: true
+
+- title: Vogon
+  url: https://chanmi-lee.github.io/Vogon/
+  image: https://chanmi-lee.github.io/images/project-vogon.png
+  completed: true
+
+- title: What's next?
+  url: https://github.com/chanmi-lee
+  image: https://chanmi-lee.github.io/images/project-next.png
+  completed: false
