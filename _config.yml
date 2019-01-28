@@ -31,15 +31,12 @@ google-analytics: UA-122657087-1
 
 # Social Links
 email:             chanmi.kate.lee@gmail.com
-#google.plus:        username
 #facebook:           username
 github:             chanmi-lee
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 linkedin:          chanmi-kate-lee
 instagram:          chanmi.kate.lee
-#youtube:           username
-#soundcloud:        username
-#codepen:           username
+twitter:           Kate75341866
 
 # Gems
 gems:
